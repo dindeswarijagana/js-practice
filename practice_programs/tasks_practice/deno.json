@@ -1,0 +1,18 @@
+{
+  "tasks": {
+    "add2": "deno add.js 1 2",
+    "add3": "deno add.js 1 2 3",
+    "add4": {
+      "command": "echo lets run everything",
+      "description": "run both commands",
+      "dependencies": ["add2", "add3"]
+    },
+    "bad": {
+      "command": "cat add.js"
+    },
+    "display": {
+      "command": "ls",
+      "dependencies": ["bad"]
+    }
+  }
+}

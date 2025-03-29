@@ -1,0 +1,36 @@
+{
+  "scriptId": "319",
+  "url": "file:///Users/dindeswarijagana/workspace/js/practice_programs/test_coverage/demo_test.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 427, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 152, "endOffset": 234, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 185, "endOffset": 230, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 265, "endOffset": 424, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 299, "endOffset": 346, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 374, "endOffset": 420, "count": 1 }],
+      "isBlockCoverage": true
+    }
+  ]
+}

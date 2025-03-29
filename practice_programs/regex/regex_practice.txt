@@ -1,0 +1,81 @@
+-->single characters
+expression: "a".match(/a/);
+output: [ "a", index: 0, input: "a", groups: undefined ]
+
+expression:"b".match(/a/)
+output:null
+
+expression:"a".match(/aa/)
+output:null
+
+
+-->double characters
+expression:"ab".match(/ab/)
+output:[ "ab", index: 0, input: "ab", groups: undefined ]
+
+expression:"ba".match(/ab/)
+output:null
+
+expression:"aa".match(/a/)
+output:[ "a", index: 0, input: "aa", groups: undefined ]
+
+expression:"aa".match(/aa/)
+output:[ "aa", index: 0, input: "aa", groups: undefined ]
+
+-->caret
+expression:"a".match(/^a/)
+output:[ "a", index: 0, input: "a", groups: undefined ]
+
+expression:"a".match(/^aa/)
+output:null
+
+----------------caret-------------------
+Question 1: Write a regular expression to match strings that start with the letter "a".
+answer:["avani", "mouni", "apple", "harsha"].filter((ele) => ele.match(/^a/));
+
+Question 2: Write a regular expression to match strings that start with any uppercase letter.
+answer:["Avani", "mouni", "apple", "Harsha"].filter((ele) => ele.match(/^.[A-Z]/));
+
+Question 3: Write a regular expression to match strings that start with the word "hello" (case-sensitive).
+answer:["hello world", "hell world", "helo world"].filter((ele) => ele.match(^hello))
+
+Question 4: Write a regular expression to match strings that start with a digit.
+answer:["8avani", "mouni", "apple", "3harsha"].filter((ele) => ele.match(/^[0-9]/));
+
+Question 5: Write a regular expression to match strings that start with a vowel (A, E, I, O, U, case insensitive).
+answer:["avani", "mouni", "Apple", "Harsha"].filter((ele) => ele.match(/^[aeiou]/i));
+
+Question 6: Write a regular expression to match strings that start with the exact word "start".
+answer:["start hello", "mouni", "Apple", "Harsha"].filter((ele) => ele.match(/^start/i));
+
+Question 7: Write a regular expression to match strings that start with "abc" and end with "xyz".
+answer:["abc hello xyz", "mouni", "Apple", "Harsha"].filter((ele) => ele.match(/^abc.+xyz$/i));
+
+Question 8: Write a regular expression to match strings that start with "0" and have at least 5 digits after it.
+answer:["098765", "078967", "0789766"].filter((ele) => ele.match(/^0([0-9]{5})/));
+
+Question 9: Write a regular expression to match strings that start with a character that is not a vowel.
+answer:["avani", "mouni", "Apple", "Harsha"].filter((ele) => ele.match(/^[^aeiou]/i))
+
+Question 10: Write a regular expression to match strings that start with either "cat" or "dog".
+answer:["cat avani", "mouni", "Apple", "Harsha"].filter((ele) => ele.match(/^[catdog]/))
+
+Question 12: Write a regular expression to match strings that start with "www" and end with ".com", and ensure that the string contains only letters, numbers, and dots.
+answer:["www.yahoo.com", "www.yahoo/.com"].filter((ele) => ele.match(/^www[a-zA-Z0-9.]*\.com$/))
+
+Question 13:write a regular expression that returns strings contains only digits
+["123", "2343", "987"].filter((ele) => ele.match(/^\d+$/))
+
+------------------back reference--------------------------------
+
+Question 1: Write a regular expression to match a string where the first word is repeated exactly once. For example, "hello hello", "test test".
+answer:["hi", "hello", "avani"].map((ele) => ele.match(/^([a-zA-z]+) \1$/i));
+
+Question 2: Match a string that contains two consecutive identical letters.
+answer:["helloo", "hello", "ab", "abcc"].filter((ele) => ele.match(/^([a-z])\1/gi))
+
+Question 3:Match a word that starts and ends with the same letter.
+answer:["level", "test", "avani"].filter((ele) => ele.match(/^([a-zA-z]).*\1$/))
+
+Question 4: Write a regular expression to match strings where two identical words appear consecutively, without any space.
+answer:["hellohello", "testtest", "hlohelo"].filter((ele) => ele.match(/^(\w)\1$/g);)

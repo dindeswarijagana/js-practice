@@ -1,0 +1,21 @@
+{
+  "scriptId": "319",
+  "url": "file:///Users/dindeswarijagana/workspace/js/practice_programs/test_coverage/demo.js",
+  "functions": [
+    {
+      "functionName": "",
+      "ranges": [{ "startOffset": 0, "endOffset": 135, "count": 1 }],
+      "isBlockCoverage": true
+    },
+    {
+      "functionName": "someF",
+      "ranges": [{ "startOffset": 21, "endOffset": 31, "count": 0 }],
+      "isBlockCoverage": false
+    },
+    {
+      "functionName": "isEven",
+      "ranges": [{ "startOffset": 56, "endOffset": 133, "count": 0 }],
+      "isBlockCoverage": false
+    }
+  ]
+}

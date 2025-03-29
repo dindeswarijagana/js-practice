@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>fetch</title>
+    <script>
+      globalThis.onload = () => {
+        const form = document.querySelector("form");
+        console.log(form);
+        form.addEventListener("submit", async (event) => {
+          console.log("inside eventListener");
+          const formData = new FormData(event.target);
+          event.preventDefault();
+          const fetchedData = await fetch("/fetch", {
+            method: "POST",
+            body: formData,
+          });
+
+          console.log("===========>", fetchedData);
+        });
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Fetching.....</h1>
+    <form>
+      <label for="name">name</label>
+      <input type="text" name="name" value="avani" />
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>

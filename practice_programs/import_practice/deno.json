@@ -1,0 +1,7 @@
+{
+  "imports": {
+    "chalk": "jsr:@nothing628/chalk@^1.0.1",
+    "node-emoji": "npm:node-emoji@^2.2.0",
+    "npm": "jsr:@tlevi/lodash"
+  }
+}
